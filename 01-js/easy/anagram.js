@@ -5,6 +5,16 @@
 */
 
 function isAnagram(str1, str2) {
+  str1="sujal";
+  str2="jalus";
+  if(str1==str2){
+    return false;
+  }
+  else{
+    return true;
+  }
+
+
   
  
  
