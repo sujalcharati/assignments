@@ -12,8 +12,7 @@
   }
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
-// 
-// }
+
 const obj1 = {
   category: 'Food',
   totalSpent: 10
