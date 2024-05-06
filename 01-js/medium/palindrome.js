@@ -4,8 +4,17 @@
 */
 
 function isPalindrome(str) {
+    let i="2";
+    
+     if(str[i]=='m' &&  str[i-1]=='o' && str[i-2]=='m'){
+       console.log("it is palindrome string");
+     }
+      
+    
 
-  return ;
+  return true;
 }
+const name = isPalindrome("mom");
+console.log(name);
 
 module.exports = isPalindrome;
