@@ -13,12 +13,6 @@ function isAnagram(str1, str2) {
   else{
     return true;
   }
-
-
-  
- 
- 
-
 }
 
 module.exports = isAnagram;
