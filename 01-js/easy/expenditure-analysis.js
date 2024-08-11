@@ -13,22 +13,38 @@
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
 
-const obj1 = {
-  category: 'Food',
-  totalSpent: 10
-
+function calculateTotalSpentByCategory(transactions) {
+  let result = []
+  transactions.forEach((transaction) => {
+    let index = result.findIndex((item) => item.category === transaction.category)
+    if (index === -1) {
+      result.push({ category: transaction.category, totalSpent: transaction.price })
+    } else {
+      result[index].totalSpent += transaction.price
+    }
+  })
+  return result;
+  // let result = []
+  // for (let transaction = 0;transaction<transactions.length;transaction++){
+  //   let index = -1;
+  //   for(let item = 0;item<result.length;item++){
+  //     if(result[item].category === transactions[transaction].category){
+  //       index = item;
+  //       break;
+  //     }
+  //   }
+  //   if(index === -1){
+  //     result.push({category:transactions[transaction].category,totalspent:transactions[transaction].price})
+  //   }else{
+  //     result[index].totalspent+= transactions[transaction].price;
+  //   }
+  // }
+  // return result;
+  
 }
-let transaction = [obj1]
+  
 
-function calculateTotalSpentByCategory(p){
 
-let pt= p;
-
-  return pt;
-}
-
-let a = calculateTotalSpentByCategory([{category:"food",totalSpent:10},{category:"clothes",totalSpent:1000}]);
-console.log(a);
-
+ 
 module.exports = calculateTotalSpentByCategory;
    
