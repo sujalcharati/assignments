@@ -44,6 +44,21 @@
   
   const app = express();
   
+  const todos =[{
+    Title:"morning class",
+    description:" wake up early"
+
+  },{
+    Title:"evening  class",
+    description:"  early to remember"
+  }
+]
+  app.get("/todos",function (req,res){
+         res.json({
+          todos
+         })
+  }) 
+
   app.use(bodyParser.json());
   
   module.exports = app;
