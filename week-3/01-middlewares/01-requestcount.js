@@ -23,8 +23,10 @@ app.get('/requestCount', function(req, res) {
 });
 
 app.use((req,res,next)=> {
+   
   requestCount = requestCount+1;
-  res.send(`${ requestCount}`)
+  res.send(`${ requestCount}`);
+  next();
 
 })
  app.listen(3000);
