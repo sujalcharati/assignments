@@ -5,13 +5,15 @@ import { useMemo, useState } from "react";
 
 export function Assignment1() {
     const [input, setInput] = useState(0);
-    // Your solution starts here
-    const expensiveValue = 0; 
-    const calculatefactorial = useMemo(
-        ()=>{
-            
-        }
-    )
+    const expensiveValue = useMemo(()=> {
+        // Your solution starts here
+        let value = 1;
+    for( let i=1; i<= input; i++){
+        value=value* i;
+    }
+        return value;
+    } , [input]);
+    
     // Your solution ends here
 
     return (
